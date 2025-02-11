@@ -1,92 +1,184 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About the School - Phoenix</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>About Sanghamitra Vidyalayam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+  </style>
 </head>
-<body>
-  <header></header>
-
-  <main>
-    <section class="about-school">
-      <h1>About Phoenix - The School of Excellence</h1>
-      <p class="about-description">
-        Established in 2000, Phoenix - The School of Excellence is more than just a school; it's a thriving community dedicated to nurturing excellence, instilling strong moral values, and fostering a passion for lifelong learning. We empower students to become well-rounded individuals equipped with the knowledge, skills, and critical thinking necessary to succeed in a dynamic world.
-      </p>
-
-      <div class="row"> 
-        <div class="col-md-6"> 
-          <img src="https://media.istockphoto.com/id/1347616560/photo/a-view-of-the-fa%C3%A7ades-of-royce-hall-and-haines-hall-at-university-of-california-los-angeles.jpg?s=612x612&w=0&k=20&c=4vosGBb4ozEBntNcp0cQvk5rNuM_8wYbredw06rchlc=" alt="About Phoenix School"> 
+<body class="font-sans">
+  <header class="bg-blue-900 text-white font-cinzel">
+    <div class="container mx-auto py-4 px-6" style="background-color: #001f3f;">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="images/school-logo1.png" alt="Sanghamitra School Logo" class="h-10 w-10 mr-3">
+                <div>
+                    <h1 class="text-xl font-bold">SANGHAMITRA VIDYALAYAM</h1>
+                    <p class="text-sm">IN ASSOCIATION WITH NARAYANA GROUP OF SCHOOLS</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="text" placeholder="Search..." class="px-2 py-1 rounded">
+                <button class="bg-yellow-400 text-blue-900 px-2 py-1 rounded">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
-        <div class="col-md-6"> 
-          <h2 class="about-highlights-title">Why Choose Phoenix?</h2>
-          <div class="about-highlights">
-            <div class="highlight">
-              <h3>Innovative Curriculum <i class="fas fa-lightbulb"></i></h3> <p>Our dynamic curriculum integrates technology, creativity, and critical thinking, preparing students for the challenges and opportunities of the 21st century.</p>
+        <div class="border-t border-white mt-4"></div>
+        <nav class="mt-4 flex justify-between space-x-6">
+            <a href="index.html" class="hover:text-yellow-400">Home</a>
+            <div class="dropdown relative">
+                <a href="about-school.html" class="hover:text-yellow-400">About</a>
+                <div class="dropdown-content">
+                    <a href="about-school.html">About School</a>
+                    <a href="philosophy.html">Philosophy</a>
+                    <a href="vision-mission.html">Vision & Mission</a>
+                    <a href="management.html">Our Management</a>
+                    <a href="achievements.html">Achievements</a>
+                </div>
             </div>
-            <div class="highlight">
-              <h3>Holistic Growth <i class="fas fa-user"></i></h3> <p>We go beyond academics, focusing on the development of the whole child. We cultivate social, emotional, and intellectual well-being through a diverse range of co-curricular activities and programs.</p>
+            <div class="dropdown relative">
+                <a href="academics.html" class="hover:text-yellow-400">Academics</a>
+                <div class="dropdown-content">
+                  <a href="academics-pre-primary.html">Pre-Primary Level</a>
+                  <a href="academics-primary.html">Primary Level</a>
+                  <a href="academics-middle-secondary.html">Middle & Secondary Level</a>
+                  <a href="academics-senior-secondary.html">Senior Secondary Level</a>
+                </div>
             </div>
-            <div class="highlight">
-              <h3>Global Recognition <i class="fas fa-globe"></i></h3> <p>Phoenix alumni excel worldwide, making a positive impact on their communities. Our school is a globally respected institution known for its commitment to academic excellence and student success.</p>
+            <div class="dropdown relative">
+              <a href="admissions.html" class="hover-underline-animation nav-link">Admissions</a>
+              <div class="dropdown-content absolute">
+                  <a href="admissions-info.html">Admission Info</a>
+                  <a href="admissions-process.html">Admission Process</a>
+                  <a href="admissions-apply-online.html">Apply Online</a>
+                  <a href="admissions-faqs.html">FAQs</a>
+              </div>
+          </div>
+            <div class="dropdown relative">
+                <a href="campus-life.html" class="hover:text-yellow-400">Campus Life</a>
             </div>
+            <div class="dropdown relative">
+                <a href="news-events.html" class="hover:text-yellow-400">News & Events</a>
+
+            </div>
+            <a href="blogs.html" class="hover:text-yellow-400">Blogs</a>
+            <a href="facilities.html" class="hover:text-yellow-400">Facilities</a>
+            <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact Us</a>
+        </nav>
+    </div>
+  </header>
+
+  <main class="p-6 bg-gray-200 font-open-sans">
+    <section class="py-12">
+      <div class="container mx-auto text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+        <h2 class="text-3xl font-bold">About Sanghamitra Vidyalayam</h2>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold">Our Legacy</h3>
+          <p class="mt-4 text-gray-700">Since 1979, Sanghamitra Vidyalayam has been at the forefront of educational excellence in Nellore. For over 45 years, we have been shaping young minds and building future leaders.</p>
+        </div>
+        <div class="text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold">Our Vision</h3>
+          <p class="mt-4 text-gray-700">To nurture young minds into well-rounded individuals who excel academically and embody strong moral values.</p>
+        </div>
+        <div class="text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold">Our Mission</h3>
+          <p class="mt-4 text-gray-700">At Sanghamitra School, we are committed to:</p>
+          <ul class="list-disc list-inside mt-4 text-gray-700">
+            <li>Providing holistic education that empowers students</li>
+            <li>Fostering critical thinking and creativity</li>
+            <li>Building character through values-based education</li>
+            <li>Creating a supportive learning environment</li>
+          </ul>
+        </div>
+        <div class="text-center p-6 rounded-lg shadow-lg bg-white transition-all duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold">Our School Motto</h3>
+          <div class="mt-4 flex flex-col items-center space-y-2">
+            <span class="bg-gray-200 px-4 py-2 rounded">THINK MERIT</span>
+            <span class="bg-gray-200 px-4 py-2 rounded">THINK TRANSPARENCY</span>
+            <span class="bg-gray-200 px-4 py-2 rounded">THINK SANGHAMITRA</span>
           </div>
         </div>
       </div>
+    </section>
 
-      <h2 class="about-values-title">Our Core Values</h2>
-      <p>At Phoenix, we believe in fostering a strong foundation of values that guide our students throughout their lives:</p>
-      <ul class="about-values">
-        <li>
-          <i class="fas fa-balance-scale"></i> Integrity: Upholding honesty and ethical behavior in all aspects of life.
-        </li>
-        <li>
-          <i class="fas fa-handshake"></i> Respect: Valuing and appreciating the diverse perspectives and backgrounds of others.
-        </li>
-        <li>
-          <i class="fas fa-user-shield"></i> Responsibility: Taking ownership of one's actions and contributing positively to the community.
-        </li>
-        <li>
-          <i class="fas fa-lightbulb"></i> Creativity: Encouraging innovative thinking and problem-solving skills.
-        </li>
-        <li>
-          <i class="fas fa-question"></i> Curiosity: Fostering a spirit of inquiry and a lifelong passion for learning.
-        </li>
-      </ul>
-
-      <h2 class="about-experience-title">A Unique Learning Experience</h2>
-      <p>Phoenix offers a unique learning experience that goes beyond traditional classrooms:</p>
-      <ul class="about-experience">
-        <li>
-          <i class="fas fa-project-diagram"></i> Project-based learning: Students engage in real-world projects, fostering collaboration, critical thinking, and problem-solving skills.
-        </li>
-        <li>
-          <i class="fas fa-globe"></i> Field trips and educational tours: We provide opportunities for students to explore the world beyond the classroom and connect learning to real-life experiences.
-        </li>
-        <li>
-          <i class="fas fa-briefcase"></i> Internship opportunities: Gain valuable professional experience through internships with leading companies and organizations.
-        </li>
-        <li>
-          <i class="fas fa-user-friends"></i> Strong sense of community: We foster a supportive and inclusive environment where students feel valued and connected.
-        </li>
-      </ul>
-
-      <div class="cta">
-        <a href="admissions.html" class="cta-btn">Learn More About Admissions</a>
+    <section class="bg-blue-900 text-white">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center py-12" style="background-color: #001f3f;">
+        <div class="bg-blue-800 p-8 rounded-lg shadow-lg transform transition hover:scale-105 md:pl-4">
+          <div class="text-3xl font-bold">45+</div>
+          <div class="mt-2">Years of Excellence</div>
+        </div>
+        <div class="bg-blue-800 p-8 rounded-lg shadow-lg transform transition hover:scale-105">
+          <div class="text-3xl font-bold">680</div>
+          <div class="mt-2">Students Enrolled</div>
+        </div>
+        <div class="bg-blue-800 p-8 rounded-lg shadow-lg transform transition hover:scale-105 md:pr-4">
+          <div class="text-3xl font-bold">60</div>
+          <div class="mt-2">Teaching & Non-Teaching Staff</div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Phoenix - The School of Excellence. All Rights Reserved.</p>
+  <footer class="bg-blue-900 text-white py-12 font-cinzel" style="background-color: #001f3f;">
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold">Contact Us</h2>
+        <div class="mt-4 flex justify-center space-x-8">
+            <div class="contact-item">
+                <strong>Phone:</strong><br>
+                <span>9440087733, 90030223924</span>
+            </div>
+            <div class="contact-item">
+                <strong>Email:</strong><br>
+                <span><a href="mailto:sanghamitraemhs@gmail.com" class="text-yellow-500 hover:underline">sanghamitraemhs@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+                <strong>Address:</strong><br>
+                <span>B.V.NAGAR, NELLORE-4</span>
+            </div>
+        </div>
+        <div class="mt-8">
+            <img src="images/sraigen-logo.png" alt="Sraigen Logo" class="mx-auto h-16">
+            <p class="mt-2">Powered by Sraigen Innovative Technologies Pvt Ltd</p>
+        </div>
+    </div>
+    <div class="bg-blue-800 py-4 mt-8">
+        <p class="text-center">© 2024 Sanghamitra - The School of Excellence. All Rights Reserved.</p>
+    </div>
   </footer>
-
-  <script src="js/scripts.js"></script>
 </body>
 </html>
