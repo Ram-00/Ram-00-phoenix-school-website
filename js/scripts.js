@@ -1,17 +1,10 @@
-// Fetch the header.html content and inject it into the header element
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('header.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then(data => {
-        document.querySelector('header').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading header:', error));
-  });
+// Load the header from header.html
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
   
   // Enable dropdown menus on hover interaction for the main navigation bar
   document.querySelectorAll('.main-nav ul li').forEach((menuItem) => {
@@ -192,4 +185,49 @@ document.addEventListener("DOMContentLoaded", function () {
                 setInterval(nextSlide, 3000);
             }
         }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        }
+
+        // Dropdown handling for mobile
+        const dropdownItems = document.querySelectorAll('.has-dropdown');
+        dropdownItems.forEach(item => {
+            const link = item.querySelector('a');
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        // Add smooth scroll animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover animation for nav items
+        const navItems = document.querySelectorAll('.nav-list > li > a');
+        navItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
     });
